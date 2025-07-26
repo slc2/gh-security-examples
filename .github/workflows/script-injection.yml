@@ -10,6 +10,7 @@ jobs:
       - name: Assign label
         run: |
           issue_title="${{ github.event.issue.title }}"
+          echo "Issue title: $issue_title"
           if [[ "$issue_title" == *"bug"* ]]; then
           echo "Issue is about a bug!"
           else
